@@ -1,0 +1,2 @@
+# __2026_03_14_chihlee_gemini__
+raspberry+python+gemini智慧開發
