@@ -38,9 +38,12 @@ class Filter:
         pass
 
     def inlet(self, body: dict, __user__: Optional[dict] = None) -> dict:
-        print("使用者輸入")
+        print("使用者輸入的內容:")
+        print(body.get("messages", [])[-1].get("content", "") if body.get("messages") else "")        
         return body
 
     def outlet(self, body: dict, __user__: Optional[dict] = None) -> dict:
-        print("模型輸出")
+        print("模型輸出的內容:")
+        print(body.get("messages", [])[-1].get("content", "") if body.get("messages") else "")
+        
         return body
