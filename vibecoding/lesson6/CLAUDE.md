@@ -1,0 +1,1 @@
+Regardless of whether user input in Chinese or English,response in Trandictional Chinese 

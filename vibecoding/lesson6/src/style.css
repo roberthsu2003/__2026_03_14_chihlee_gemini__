@@ -1,0 +1,165 @@
+:root {
+  --cream: #f7f3e8;
+  --olive: #3d4f3a;
+  --sage: #8fa68a;
+  --paper: #fffef8;
+  --ink: #1c1b18;
+  --accent: #c45c3e;
+  font-family: "Source Sans 3", "Noto Sans TC", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+#app {
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.brand .tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.brand h1 {
+  margin: 0.35rem 0 0.25rem;
+  font-family: "Fraunces", "Noto Serif TC", Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 1.85rem);
+  font-weight: 500;
+  color: var(--olive);
+}
+
+.brand p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #5c5a54;
+  line-height: 1.45;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+input,
+select {
+  font: inherit;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(61, 79, 58, 0.25);
+  border-radius: 0.5rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--olive);
+  color: var(--cream);
+  transition: filter 0.15s ease;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--olive);
+  border: 2px solid var(--olive);
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+.receipt {
+  margin-top: 1.5rem;
+  padding: 1.35rem 1.5rem 1.5rem;
+  background: var(--paper);
+  border-radius: 0.35rem;
+  border: 1px dashed rgba(61, 79, 58, 0.35);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  min-height: 8rem;
+}
+
+.receipt h2 {
+  margin: 0 0 0.75rem;
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(61, 79, 58, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.receipt pre {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.hint {
+  margin-top: 1.25rem;
+  font-size: 0.78rem;
+  color: #6b6860;
+  line-height: 1.45;
+}
+
+.hint code {
+  font-size: 0.9em;
+  color: var(--olive);
+}
