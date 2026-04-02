@@ -1,0 +1,1 @@
+1. Regardless of whether  user type in Chines or English,please reply in Tranditional Chinese.
