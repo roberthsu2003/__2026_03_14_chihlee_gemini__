@@ -2,7 +2,8 @@
 /home/pi/Documents/__2026_03_14_chihlee_gemini__/vibecoding/vite-advanced-demo/README.md
 # Vite 進階配置示範
 
-這是一個展示 Vite 進階配置的 React + TypeScript 專案，包含了環境變數、跨域代理、路徑別名等實用功能。
+這是一個整合了 Vite 進階功能的 React + TypeScript 範例專案，核心展示了環境變數處理、API 代理設置、以及路徑別名等實用配置技巧。
+
 
 ## 🚀 快速開始
 
@@ -171,8 +172,4 @@ build: {
 專案配置了嚴格的 TypeScript 類型檢查，確保代碼品質與類型安全。
 
 ## 📚 參考資源
-
-- [Vite 官方文檔](https://vite.dev/)
-- [React 官方文檔](https://react.dev/)
-- [TypeScript 官方文檔](https://www.typescriptlang.org/)
 ```
