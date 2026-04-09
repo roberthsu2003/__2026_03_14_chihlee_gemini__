@@ -12,11 +12,12 @@ function App() {
   const API_URL = import.meta.env.VITE_API_URL;
   // 以下變數在瀏覽器中會是 undefined，系統保護了這個沒加 VITE_ 的變數
   const SECRET = import.meta.env.SECRET_TOKEN; 
-
+  
   useEffect(() => {
-    // [進階配置 3] 測試 Proxy 代理
-    // 因為在 vite.config.ts 設定了 proxy，這裡打向 '/api/test'
-    // 實際上會被 Vite 轉向 'http://localhost:3000/api/test' (不跨域！)
+    // 這個 useEffect 鉤子用來在組件掛載 (mount) 時執行一次初始化或副作用操作。
+    // 由於我們想在組件剛載入時立即測試 API 呼叫，所以將依賴陣列設置為空依賴數組 []。
+    // 如果不使用 useEffect，我們就無法在組件生命週期（例如載入時）執行副作用，
+    // 除非是在事件處理器 (onClick) 或其他狀態變化時觸發。
     fetch('/api/test')
       .then(res => res.json().catch(() => ({ message: '這個 API 是假的，用來測試 Proxy 設定' })))
       .then(json => setData(json.message))
