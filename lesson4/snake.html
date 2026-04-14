@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貪食蛇遊戲</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: 'Microsoft JhengHei', sans-serif;
+        }
+
+        .game-container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .score-board {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .score-board span {
+            color: #4ecca3;
+            font-weight: bold;
+        }
+
+        canvas {
+            border: 3px solid #4ecca3;
+            border-radius: 10px;
+            background-color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(78, 204, 163, 0.3);
+        }
+
+        .controls {
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .controls p {
+            margin: 5px 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 30px;
+            font-size: 16px;
+            background: #4ecca3;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #3db892;
+            transform: scale(1.05);
+        }
+
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.9);
+            padding: 30px 50px;
+            border-radius: 15px;
+            color: #fff;
+            display: none;
+        }
+
+        .game-over h2 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .game-over p {
+            color: #4ecca3;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐍 貪食蛇</h1>
+        <div class="score-board">
+            分數: <span id="score">0</span> | 最高分: <span id="highScore">0</span>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <button onclick="startGame()">開始遊戲</button>
+            <p>使用方向鍵 ↑ ↓ ← → 控制蛇的移動</p>
+            <p>按空白鍵暫停/繼續</p>
+        </div>
+    </div>
+
+    <div class="game-over" id="gameOver">
+        <h2>遊戲結束!</h2>
+        <p>最終分數: <span id="finalScore">0</span></p>
+        <button onclick="startGame()">再玩一次</button>
+    </div>
+
+    <script src="snake.js"></script>
+</body>
+</html>
