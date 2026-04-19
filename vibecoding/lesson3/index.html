@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CDN 試作</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-100 text-slate-900">
+    <header class="border-b border-slate-200 bg-white px-4 py-4 shadow-sm">
+      <h1 class="text-2xl font-bold tracking-tight">Tailwind 入門</h1>
+      <p class="mt-1 text-sm text-slate-600">Utility class 直接寫在 HTML 上。</p>
+    </header>
+
+    <main class="mx-auto max-w-2xl px-4 py-8">
+      <section
+        class="rounded-xl border border-slate-200 bg-white p-6 shadow-md"
+      >
+        <h2 class="text-lg font-semibold text-slate-800">小卡片</h2>
+        <p class="mt-2 text-slate-600">
+          <code class="rounded bg-slate-100 px-1 py-0.5 text-sm">p-6</code>
+          表示 padding、
+          <code class="rounded bg-slate-100 px-1 py-0.5 text-sm">rounded-xl</code>
+          表示圓角。
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm text-emerald-800"
+            >標籤 A</span
+          >
+          <span class="rounded-full bg-sky-100 px-3 py-1 text-sm text-sky-800"
+            >標籤 B</span
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
