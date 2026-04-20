@@ -52,7 +52,7 @@ const handleSubmit = async (e: FormEvent) => {
       >
         <header className="text-center mb-10">
           <h1 className="text-4xl font-bold text-slate-900 tracking-tight mb-2">
-            Gemini 一句話問答
+            Gemini 一句話問答(第1次修改)
           </h1>
           <p className="text-slate-500 text-lg">
             輸入任何問題，讓 AI 為你解答
