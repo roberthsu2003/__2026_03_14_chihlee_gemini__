@@ -38,3 +38,9 @@ https://www.youtube.com/watch?v=qnoOqfhAfwU
 
 ---
 
+## 2026_04_25_早上
+
+https://www.youtube.com/watch?v=xfuyOD_IPDo
+
+---
+
